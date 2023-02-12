@@ -1,3 +1,7 @@
+# Project Description
+
+Introduction to AWS Amplify. Quick application to learn the basics of AWS Amplify and utilizing services such as Amplify Auth and Storage.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
