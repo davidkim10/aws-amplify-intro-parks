@@ -1,0 +1,90 @@
+.loading-state {
+  background-color: #dfe6ec;
+  display: block;
+  direction: ltr;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Variants */
+.loading-state--text {
+  border-radius: 0.25rem;
+}
+
+.loading-state--rect {
+  border-radius: 0;
+}
+
+.loading-state--circle {
+  border-radius: 50%;
+}
+
+/* Animations */
+.loading-state--pulse {
+  animation: 1.5s ease-in-out 0.5s infinite normal none running
+    loadingAnimationPulse;
+}
+
+.loading-state--wave:before {
+  -webkit-animation: loadingAnimationWave 1.2s linear infinite;
+  animation: loadingAnimationWave 1.2s linear infinite;
+  background: linear-gradient(
+      90deg,
+      hsla(0, 0%, 100%, 0) 46%,
+      hsla(0, 0%, 100%, 0.35) 50%,
+      hsla(0, 0%, 100%, 0) 54%
+    )
+    50% 50%;
+  bottom: 0;
+  content: " ";
+  left: 50%;
+  margin-left: -250%;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 500%;
+  z-index: 1;
+}
+
+@-webkit-keyframes loadingAnimationPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loadingAnimationPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes loadingAnimationWave {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+  to {
+    transform: translate3d(30%, 0, 0);
+  }
+}
+@keyframes loadingAnimationWave {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+  to {
+    transform: translate3d(30%, 0, 0);
+  }
+}

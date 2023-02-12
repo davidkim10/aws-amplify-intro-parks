@@ -1,0 +1,16 @@
+{
+  "resourceName": "s35e5b2df5",
+  "policyUUID": "5e5b2df5",
+  "bucketName": "amplifyparksapp0e6aa5003ff34a0bb6ab7732330768a6",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
