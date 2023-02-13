@@ -29,12 +29,20 @@ export default function Home({ parks }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.main}>
         <div className="container">
-          <h1>National Parks</h1>
-          {parks.map((park) => {
-            return <ParkItem park={park} key={park.id} />;
-          })}
+          <div className={styles.header}>
+            <h1>National Parks</h1>
+            <button className={styles.btn}>
+              <Link href="/create-park">Add Park</Link>
+            </button>
+          </div>
+          <div className="parks">
+            {parks.map((park) => {
+              return <ParkItem park={park} key={park.id} />;
+            })}
+          </div>
         </div>
       </main>
     </>
